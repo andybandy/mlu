@@ -3,7 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>moscow-laptop-unit</title>
+    <link rel="stylesheet" href="./app.css">
   </head>
   <body>
+    <!---
+    <div class="video_wrapper">
+      <video autoplay loop id="back_video">
+        <source src="./Turtles.webm" type="video/webm"></source>
+        <source src="./Turtles.m4v" type="video/mp4"></source>
+      </video>
+    </div>
+    -->
+    <div id="app_wrapper" class="app_wrapper">
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/p5js/lib/p5.js"></script>
+    <script src="./bower_components/p5js/lib/addons/p5.sound.js"></script>
+    <script src="./sketch.js"></script>
+    <script>
+      $(function(){
+        window.app.init();
+      });
+    </script>
   </body>
 </html>
