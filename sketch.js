@@ -14,7 +14,7 @@
 
       s.setup = function() {
         // sound.loop();
-        s.createCanvas(600, 400);
+        s.createCanvas($(window).width(), $(window).height());
         s.background('black');
 
         mic = new p5.AudioIn();
@@ -30,10 +30,10 @@
         s.background('black');
         s.noStroke();
         s.fill(0, 200, 0);
-        for (var i = 0; i < spectrum.lenght; i++) {
-          var x = s.map(i, 0, spectrum.lenght, 0, s.width);
+        for (var i = 0; i < spectrum.length; i++) {
+          var x = s.map(i, 0, spectrum.length, 0, s.width);
           var h = -s.height + s.map(spectrum[i], 0, 255, s.height, 0);
-          s.rect(x, s.height, s.width / spectrum.lenght, h);
+          s.rect(x, s.height, s.width / spectrum.length, h);
         }
 
         // var waveform = fft.waveform();
